@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizza</title>
+</head>
+<body>
+<h1>Create your pizza</h1>
+<h3>Size</h3>
+    <input type="radio" name = "size" id = "big" checked data-calories = "50" data-price="100" data-title = "big">
+    <label for="big">Big</label><br>
+    <input type="radio" name = "size" id = "small" data-calories = "60" data-price="200" data-title = "small">
+    <label for="big">Small</label>
+<h3>Thickness</h3>
+    <input type="radio" name = "thick" id = "thick" checked data-calories = "40" data-price="500" data-title = "thick">
+    <label for="thick">Thick</label><br>
+    <input type="radio" name = "thick" id = "thin" data-calories = "10" data-price="300" data-title = "thin">
+    <label for="thin">Thin</label>
+<h3>Additional</h3>
+    <input type="checkbox" id ="corn" name = "add" data-calories = "90" data-price="50" data-title = "corn">
+    <label for="corn"> Corn</label><br>
+    <input type="checkbox" id = "pineapple" name = "add" checked data-calories = "20" data-price="60" data-title = "pineapple">
+    <label for="pineapple">Pineapple</label><br>
+    <input type="checkbox" id = "ham" name = "add" checked data-calories = "30" data-price="70" data-title = "ham">
+    <label for="ham">Ham</label><br><br>
+<button>Order</button>
+<div class="result"></div>
+<script src = "script.js"></script>
+</body>
+</html>
