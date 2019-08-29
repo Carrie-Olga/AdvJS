@@ -24,7 +24,7 @@ const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-a
 // Changed as per homework - on fetch()
 
 
-//   _getRequest() {
+
 //       let getRequest = (url) =>  {
 //             return new Promise((resolve, reject) => {
 //               let xhr = new XMLHttpRequest();
@@ -41,7 +41,7 @@ const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-a
 //               xhr.send();
 //             });
 //       };
-// };
+
 //
 //
 // _getRequest() {
