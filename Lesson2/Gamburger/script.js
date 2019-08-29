@@ -1,3 +1,7 @@
+//On this page:
+//1. Hamburger on classes
+//2. Hamburger on functions (commented)
+
 class Param {
     constructor(element) {
         this.name = element.dataset.title;
@@ -96,33 +100,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //
 //
-//
-// class Hamburger {
-//     constructor(size, stuffing, topping) {
-//         this.size = size;
-//         this.stuffing = stuffing;
-//         this.topping = topping;
-//     }
-//     getSize() { // Узнать размер гамбургера
-//         return this.size;
-//     }
-//     getStuffing() { // Узнать начинку гамбургера
-//         return this.stuffing;
-//     }
-//     addTopping(topping) { // Добавить добавку
-//
-//     }
-//     removeTopping(topping) { // Убрать добавку
-//
-//     }
-//     getToppings(topping) { // Получить список добавок
-//
-//     }
-//     calculatePrice() {  // Узнать цен
-//
-//     }
-//     calculateCalories() {   // Узнать калорийность
-//
-//     }
-// }
+
 
