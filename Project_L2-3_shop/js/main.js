@@ -24,6 +24,26 @@ const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-a
 // Changed as per homework - on fetch()
 
 
+//   _getRequest() {
+//       let getRequest = (url) =>  {
+//             return new Promise((resolve, reject) => {
+//               let xhr = new XMLHttpRequest();
+//               xhr.open('GET', url, true); //true - асинхронный запрос
+//               xhr.onreadystatechange = () => {
+//                 if (xhr.readyState === 4) { // запрос выполнен
+//                   if (xhr.status !== 200) {
+//                     reject(`Error ${xhr.status} ${xhr.statusText}`);
+//                   } else {
+//                     resolve(xhr.responseText);
+//                   }
+//                 }
+//               };
+//               xhr.send();
+//             });
+//       };
+// };
+//
+//
 // _getRequest() {
 //   return fetch(`${API}/catalogData.json`)
 //       .then(result => result.json())
@@ -60,6 +80,19 @@ class ProductList {
         });
   }
 
+    // Promise
+    // let num = (a) => {
+    //   return  new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       if (a) {
+    //
+    //         resolve(a + 10);
+    //       } else {
+    //         reject('Error!');
+    //       }
+    //     }, 2000);
+    //   });
+    // };
   _render() {
     const block = document.querySelector(this.container);
 
