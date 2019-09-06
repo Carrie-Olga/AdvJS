@@ -9,6 +9,7 @@ const app = new Vue({
         filtered: [],
         isVisibleCart: false,
         searchLine: '',
+        show: true,
     },
     methods: {
         getJson(url){

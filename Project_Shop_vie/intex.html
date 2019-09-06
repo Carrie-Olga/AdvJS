@@ -18,8 +18,9 @@
                 </button>
             </form>
             <button class="btn-cart" type="button" @click="isVisibleCart=!isVisibleCart">Корзина</button>
-            <div class="cart-block" :class="{invisible: !isVisibleCart, '': isVisibleCart}">
-                <div class="cart-item">
+            <div class="cart-block" :class="{invisible: !isVisibleCart}">
+                <div v-if="show">Нет данных</div>
+                <div class="cart-item" v-else>
                     <div class="product-bio">
                         <img :src="'https://placehold.it/70x70'" alt="Some image">
                         <div class="product-desc">
