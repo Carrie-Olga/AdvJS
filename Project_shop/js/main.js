@@ -134,7 +134,7 @@ class ProductsList extends List{
     document.querySelector('.search-form').addEventListener('submit', e => {
       e.preventDefault();
       this.filter(document.querySelector('.search-field').value)
-    })
+    });
   }
 }
 

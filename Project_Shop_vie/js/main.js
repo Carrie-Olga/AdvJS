@@ -5,7 +5,10 @@ const app = new Vue({
     data: {
         catalogUrl: '/catalogData.json',
         products: [],
-        imgCatalog: 'https://placehold.it/200x150'
+        imgCatalog: 'https://placehold.it/200x150',
+        filtered: [],
+        isVisibleCart: false,
+        //searchLine: filterGoods(),
     },
     methods: {
         getJson(url){
@@ -17,6 +20,19 @@ const app = new Vue({
         },
         addProduct(product){
             console.log(product.id_product);
+        },
+        filterGoods(value){
+            const regexp = new RegExp(value, 'i');
+            this.filtered = this.products.filter(product => regexp.test(product.product_name));
+            this.products.forEach(el => {
+                const block = document.querySelector(`.product-item[data-id="${el.id_product}"]`);
+                console.log(block);
+                if(!this.filtered.includes(el)){
+                    block.classList.add('invisible');
+                } else {
+                    block.classList.remove('invisible');
+                }
+            })
         }
     },
     mounted(){
@@ -26,5 +42,18 @@ const app = new Vue({
                     this.products.push(el);
                 }
             });
+        document.querySelector('.search-form').addEventListener('submit', e => {
+            e.preventDefault();
+            this.filterGoods(document.querySelector('.search-field').value)
+        });
+        document.querySelector('.btn-cart').addEventListener('click', e => {
+            if (this.isVisibleCart == false) {
+                let cartVision = document.querySelector('.cart-block');
+                cartVision.classList.remove('invisible');
+            } else {
+                document.querySelector('.cart-block').classList.add('invisible');
+            }
+            this.isVisibleCart = !this.isVisibleCart;
+        });
     }
 });
