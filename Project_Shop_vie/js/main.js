@@ -47,14 +47,14 @@ const app = new Vue({
         //     this.searchLine = document.querySelector('.search-field').value;
         //     this.filterGoods(this.searchLine);
         // });
-        document.querySelector('.btn-cart').addEventListener('click', e => {
-            if (this.isVisibleCart == false) {
-                let cartVision = document.querySelector('.cart-block');
-                cartVision.classList.remove('invisible');
-            } else {
-                document.querySelector('.cart-block').classList.add('invisible');
-            }
-            this.isVisibleCart = !this.isVisibleCart;
-        });
+        // document.querySelector('.btn-cart').addEventListener('click', e => {
+        //     if (this.isVisibleCart == false) {
+        //         let cartVision = document.querySelector('.cart-block');
+        //         cartVision.classList.remove('invisible');
+        //     } else {
+        //         document.querySelector('.cart-block').classList.add('invisible');
+        //     }
+        //     this.isVisibleCart = !this.isVisibleCart;
+        // });
     }
 });
