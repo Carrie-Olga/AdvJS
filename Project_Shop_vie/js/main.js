@@ -8,7 +8,7 @@ const app = new Vue({
         imgCatalog: 'https://placehold.it/200x150',
         filtered: [],
         isVisibleCart: false,
-        //searchLine: filterGoods(),
+        searchLine: this.getSearch,
     },
     methods: {
         getJson(url){
@@ -21,12 +21,14 @@ const app = new Vue({
         addProduct(product){
             console.log(product.id_product);
         },
+        getSearch() {
+          return   document.querySelector('.search-field').value;
+        },
         filterGoods(value){
             const regexp = new RegExp(value, 'i');
             this.filtered = this.products.filter(product => regexp.test(product.product_name));
             this.products.forEach(el => {
                 const block = document.querySelector(`.product-item[data-id="${el.id_product}"]`);
-                console.log(block);
                 if(!this.filtered.includes(el)){
                     block.classList.add('invisible');
                 } else {
@@ -44,7 +46,7 @@ const app = new Vue({
             });
         document.querySelector('.search-form').addEventListener('submit', e => {
             e.preventDefault();
-            this.filterGoods(document.querySelector('.search-field').value)
+            this.filterGoods(this.searchLine);
         });
         document.querySelector('.btn-cart').addEventListener('click', e => {
             if (this.isVisibleCart == false) {
