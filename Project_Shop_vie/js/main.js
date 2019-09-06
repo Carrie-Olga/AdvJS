@@ -42,11 +42,11 @@ const app = new Vue({
                     this.products.push(el);
                 }
             });
-        document.querySelector('.search-form').addEventListener('submit', e => {
-            e.preventDefault();
-            this.searchLine = document.querySelector('.search-field').value;
-            this.filterGoods(this.searchLine);
-        });
+        // document.querySelector('.search-form').addEventListener('submit', e => {
+        //     e.preventDefault();
+        //     this.searchLine = document.querySelector('.search-field').value;
+        //     this.filterGoods(this.searchLine);
+        // });
         document.querySelector('.btn-cart').addEventListener('click', e => {
             if (this.isVisibleCart == false) {
                 let cartVision = document.querySelector('.cart-block');
