@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    color: #000;
+    background: #222;
+}
+.container {
+    background: #ccc;
+    height: 100vh;
+    padding: 0 20px;
+}
+.container h1 {
+    margin: 0;
+    padding-top: 35px;
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 35px 0;
+}
+
